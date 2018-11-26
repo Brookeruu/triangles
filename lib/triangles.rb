@@ -10,13 +10,14 @@ class Triangle
   def is_triangle
     sides = [side1,side2, side3].sort
     if (sides[0] + sides[1] <= sides[2] || sides[0] == 0)
-      "Not a triangle"
+    output = "Not a triangle"
     elsif (sides[0] == sides[1] && sides[0] == sides[2])
-      "Equilateral Triangle!"
+      output = "Equilateral Triangle!"
     elsif (sides[0] == sides[1] || sides[0] == sides[2] || sides[1] == sides[2])
-      "Isosceles Triangle!"
-    elsif (sides[0] != sides[1] && sides[0] != sides[2] && sides[1] != sides[2])
-      "Scalene Triangle!"
+      output = "Isosceles Triangle!"
+    else (sides[0] != sides[1] && sides[0] != sides[2] && sides[1] != sides[2])
+      output = "Scalene Triangle!"
     end
+    return output
   end
 end
